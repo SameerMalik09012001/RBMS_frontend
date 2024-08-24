@@ -28,8 +28,8 @@ const AcceptModal: React.FC = ({ isOpen, onClose, currentBox, setCurrentBox, set
     );
     dispatch(fetchApiData("post", `/salary-things/approveSalary`, {currentSalary:currentBox?.currentSalary, updatedSalary: currentBox?.updatedSalary, id:currentBox?.id}));
     setTimeout(()=>{
-      setSalaryAccepted(prev=>!prev)
-    }, 200)
+      setSalaryAccepted()
+    }, 1000)
     setCurrentBox({})
     onClose()
   }

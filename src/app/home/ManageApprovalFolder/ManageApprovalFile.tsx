@@ -13,6 +13,7 @@ const ManageApproval = () => {
   const [salaryAccepted, setSalaryAccepted] = useState(false);
   const dispatch = useDispatch();
   const onAccept = () => {
+    
     setIsAcceptModalOpen(true);
   };
 
@@ -30,6 +31,10 @@ const ManageApproval = () => {
   } = NotificationApprovalsState;
 
   const [currentBox, setCurrentBox] = useState({});
+
+  const toggleSalaryUpdate = () =>{
+    setSalaryAccepted(prev=>!prev)
+}
 
   useEffect(() => {
     if (NotifiApprovalData) {
@@ -67,14 +72,14 @@ const ManageApproval = () => {
         );
       })}
       <AcceptModal
-        setSalaryAccepted={setSalaryAccepted}
+        setSalaryAccepted={toggleSalaryUpdate}
         setCurrentBox={setCurrentBox}
         currentBox={currentBox}
         isOpen={isAcceptModalOpen}
         onClose={() => setIsAcceptModalOpen(false)}
       />
       <RejectModal
-        setSalaryAccepted={setSalaryAccepted}
+        setSalaryAccepted={toggleSalaryUpdate}
         setCurrentBox={setCurrentBox}
         currentBox={currentBox}
         isOpen={isRejectModalOpen}

@@ -1,6 +1,6 @@
 "use client";
 
-import { createUpdateSalaryTempAPIThunk, resetUpdateSalaryState } from "@/lib/store/thunk/UpdateSalaryActionCreatorThunk";
+import { createUpdateSalaryTempAPIThunk } from "@/lib/store/thunk/UpdateSalaryActionCreatorThunk";
 import React, { useEffect, useState } from "react";
 
 import ReactDom from "react-dom";
@@ -58,20 +58,19 @@ const SalaryModel: React.FC = ({
     setTimeout(() => {
       handleSalaryUpdate();
       onClose();
-    }, 400);
+    }, 1000);
   };
 
   useEffect(() => {
     if (UpdateSalaryData?.updateSalary) {
-      dispatch(resetUpdateSalaryState())
+      console.log("chala..");
       SetIsSuccessModalOpen(true, "Salary Update Successfully");
     }
     
     if (UpdateSalaryError) {
-      dispatch(resetUpdateSalaryState())
       SetIsErrorModalOpen(true, "Unable to Update");
     }
-  }, [UpdateSalaryData, UpdateSalaryError]);
+  }, [UpdateSalaryData, UpdateSalaryError, dispatch]);
 
   console.log(UpdateSalaryData, UpdateSalaryError);
 

@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { createLogoutAPIThunk } from "@/lib/store/thunk/LogoutActionCreatorThunk";
 import { createCookieCheckAPIThunk } from "@/lib/store/thunk/cookieCheckActionCreatorThunk";
 import UserContext from "@/app/contextAPI/userContextAPi";
+import { isNull } from "lodash";
 
 const Sidebar: React.FC = () => {
   console.log(
@@ -60,14 +61,17 @@ const Sidebar: React.FC = () => {
     );
     dispatch(fetchApiData("get", `/user/cookieCheck`, null));
   }, []);
+  
 
   useEffect(() => {
     if (data?.user) {
       setUser(data?.user);
     }
-    if (data === null && !loginData) {
+
+    if (isNull(data)) {
       route.push("/signin");
     }
+
   }, [data]);
 
   console.log({ data, loading, error });

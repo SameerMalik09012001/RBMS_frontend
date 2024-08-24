@@ -9,6 +9,7 @@ import { debounce } from "lodash";
 import ErrorModal from "@/app/ErrorModal/ErrorModal";
 import SuccessModal from "@/app/ErrorModal/SuccessModal";
 import UserContext from "@/app/contextAPI/userContextAPi";
+import { resetUpdateSalaryState } from "@/lib/store/thunk/UpdateSalaryActionCreatorThunk";
 
 // employe id , first name , last name , email, contact No, Role - manager | TL | employee, gender etc
 interface UserData {
@@ -61,6 +62,7 @@ const ManageSalary = () => {
   const dispatch = useDispatch();
 
   const handleSalaryChange = (cell) => {
+    dispatch(resetUpdateSalaryState())
     setEditCell(cell.row.original);
     setIsModalOpen(true);
   };

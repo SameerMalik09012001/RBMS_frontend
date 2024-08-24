@@ -41,9 +41,10 @@ const RejectModal: React.FC = ({
         id: currentBox?.id,
       })
     );
+
     setTimeout(() => {
-      setSalaryAccepted((prev) => !prev);
-    }, 200);
+      setSalaryAccepted();
+    }, 1000);
 
     setCurrentBox({});
     onClose();
