@@ -7,12 +7,12 @@ import Info from "./TheMainContainer/UserInfo";
 import ManageApproval from "./ManageApprovalFolder/ManageApprovalFile";
 import ManageSalary from "./ManagerSalaryFolder/ManageSalaryFile";
 import ManageUsers from "./ManageUserFolder/ManageUsersFile";
-import { createLogoutAPIThunk } from "@/lib/store/thunk/LogoutActionCreatorThunk";
 import { useDispatch, useSelector } from "react-redux";
 import UserContext from "../contextAPI/userContextAPi";
 import { useRouter } from "next/navigation";
-import { resetLoginState } from "@/lib/store/thunk/loginActionCreatorThunk";
-import { resetCookieCheckState } from "@/lib/store/thunk/cookieCheckActionCreatorThunk";
+import { createLogoutAPIThunk } from "../../lib/store/thunk/LogoutActionCreatorThunk";
+import { resetLoginState } from "../../lib/store/thunk/loginActionCreatorThunk";
+import { resetCookieCheckState } from "../../lib/store/thunk/cookieCheckActionCreatorThunk";
 
 export interface HomePageProps {
   username: string;

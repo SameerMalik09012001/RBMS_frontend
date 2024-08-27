@@ -5,10 +5,9 @@ import { useAppDispatch } from "../../../lib/store/hooks/index";
 import { setTab } from "../../../lib/store/features/tab/tabSlice";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
-import { createLogoutAPIThunk } from "@/lib/store/thunk/LogoutActionCreatorThunk";
-import { createCookieCheckAPIThunk } from "@/lib/store/thunk/cookieCheckActionCreatorThunk";
-import UserContext from "@/app/contextAPI/userContextAPi";
 import { isNull } from "lodash";
+import UserContext from "../../contextAPI/userContextAPi";
+import { createCookieCheckAPIThunk } from "../../../lib/store/thunk/cookieCheckActionCreatorThunk";
 
 const Sidebar: React.FC = () => {
   console.log(

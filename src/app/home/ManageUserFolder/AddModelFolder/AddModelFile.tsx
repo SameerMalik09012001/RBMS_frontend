@@ -1,11 +1,12 @@
 "use client";
 
-import UserContext from "@/app/contextAPI/userContextAPi";
-import { createAddUserAPIThunk } from "@/lib/store/thunk/addUserActionCreatorThunk";
-import { createGetByRoleUserAPIThunk } from "@/lib/store/thunk/getByRoleUserActionCreatorThunk";
+
 import React, { useContext, useEffect, useState } from "react";
 import ReactDom from "react-dom";
 import { useDispatch, useSelector } from "react-redux";
+import UserContext from "../../../contextAPI/userContextAPi";
+import { createGetByRoleUserAPIThunk } from "../../../../lib/store/thunk/getByRoleUserActionCreatorThunk";
+import { createAddUserAPIThunk } from "../../../../lib/store/thunk/addUserActionCreatorThunk";
 
 const AddModal: React.FC = ({ isOpen, onClose, setflag , SetIsSuccessModalOpen, SetIsErrorModalOpen}) => {
   const [role, setRole] = useState("");

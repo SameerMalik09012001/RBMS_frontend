@@ -1,11 +1,11 @@
 "use client";
 
-import { createAcceptSalaryApprovalAPIThunk } from '@/lib/store/thunk/acceptSalaryApprovalActionCreatorThunk';
 import React, { useState } from 'react';
 
 
 import ReactDom from "react-dom";
 import { useDispatch, useSelector } from 'react-redux';
+import { createAcceptSalaryApprovalAPIThunk } from '../../../../lib/store/thunk/acceptSalaryApprovalActionCreatorThunk';
 
 const AcceptModal: React.FC = ({ isOpen, onClose, currentBox, setCurrentBox, setSalaryAccepted }) => {
   if (!isOpen) return null;

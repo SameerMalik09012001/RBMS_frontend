@@ -1,15 +1,13 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
-import { useTable, HeaderGroup } from "react-table";
 import SalaryModel from "./updatesalaryModalFolder/SalaryModelFile";
 import ShowTable from "./showTableFile";
 import { useDispatch, useSelector } from "react-redux";
-import { createGetUserDataAPIThunk } from "@/lib/store/thunk/GetUserDataActionCreatorThunk";
-import { createGetUserByRoleAPIThunk } from "@/lib/store/thunk/GetUserByRoleSalaryActionCreatorThunk";
 import { debounce } from "lodash";
-import ErrorModal from "@/app/ErrorModal/ErrorModal";
-import SuccessModal from "@/app/ErrorModal/SuccessModal";
-import UserContext from "@/app/contextAPI/userContextAPi";
-import { resetUpdateSalaryState } from "@/lib/store/thunk/UpdateSalaryActionCreatorThunk";
+import { resetUpdateSalaryState } from "../../../lib/store/thunk/UpdateSalaryActionCreatorThunk";
+import { createGetUserByRoleAPIThunk } from "../../../lib/store/thunk/GetUserByRoleSalaryActionCreatorThunk";
+import ErrorModal from "../../ErrorModal/ErrorModal";
+import SuccessModal from "../../ErrorModal/SuccessModal";
+import UserContext from "../../contextAPI/userContextAPi";
 
 // employe id , first name , last name , email, contact No, Role - manager | TL | employee, gender etc
 interface UserData {

@@ -11,13 +11,14 @@ import AddModal from "./AddModelFolder/AddModelFile";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import ShowTable from "./ShowTableComp";
-import { createGetUserDataAPIThunk } from "@/lib/store/thunk/GetUserDataActionCreatorThunk";
-import { createGlobalSearchUserAPIThunk } from "@/lib/store/thunk/GlobalSearchUserActionCreatorThunk";
 import {debounce} from 'lodash'
-import { createColumnFilterAPIThunk } from "@/lib/store/thunk/GetUesrByColumnFilterActionCreatorThunk";
-import ErrorModal from "@/app/ErrorModal/ErrorModal";
-import SuccessModal from "@/app/ErrorModal/SuccessModal";
-import { resetAddUserState } from "@/lib/store/thunk/addUserActionCreatorThunk";
+import { createGetUserDataAPIThunk } from "../../../lib/store/thunk/GetUserDataActionCreatorThunk";
+import { createGlobalSearchUserAPIThunk } from "../../../lib/store/thunk/GlobalSearchUserActionCreatorThunk";
+import { resetAddUserState } from "../../../lib/store/thunk/addUserActionCreatorThunk";
+import { createColumnFilterAPIThunk } from "../../../lib/store/thunk/GetUesrByColumnFilterActionCreatorThunk";
+import ErrorModal from "../../ErrorModal/ErrorModal";
+import SuccessModal from "../../ErrorModal/SuccessModal";
+
 
 // employe id , first name , last name , email, contact No, Role - manager | TL | employee, gender etc
 interface UserData {

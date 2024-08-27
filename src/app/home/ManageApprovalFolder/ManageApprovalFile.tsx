@@ -3,7 +3,7 @@ import UserCard from "./userCard/UserCardFile";
 import RejectModal from "./ModalsFolder/RejectModalFIle";
 import AcceptModal from "./ModalsFolder/AcceptModelFile";
 import { useDispatch, useSelector } from "react-redux";
-import { createNotiApprovalAPIThunk } from "@/lib/store/thunk/approvalNotificationActionCreatorThunk";
+import { createNotiApprovalAPIThunk } from "../../../lib/store/thunk/approvalNotificationActionCreatorThunk";
 
 const ManageApproval = () => {
   const [UserData, setUserData] = useState([]);

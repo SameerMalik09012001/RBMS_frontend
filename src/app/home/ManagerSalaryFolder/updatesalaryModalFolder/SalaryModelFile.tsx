@@ -1,10 +1,10 @@
 "use client";
 
-import { createUpdateSalaryTempAPIThunk } from "@/lib/store/thunk/UpdateSalaryActionCreatorThunk";
 import React, { useEffect, useState } from "react";
 
 import ReactDom from "react-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { createUpdateSalaryTempAPIThunk } from "../../../../lib/store/thunk/UpdateSalaryActionCreatorThunk";
 
 const SalaryModel: React.FC = ({
   isOpen,

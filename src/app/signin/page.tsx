@@ -3,12 +3,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
-import { createLoginAPIThunk } from "@/lib/store/thunk/loginActionCreatorThunk";
 import UserContext from "../contextAPI/userContextAPi";
-import { createCookieCheckAPIThunk } from "@/lib/store/thunk/cookieCheckActionCreatorThunk";
 import ErrorModal from "../ErrorModal/ErrorModal";
 import SuccessModal from "../ErrorModal/SuccessModal";
-import { resetLogoutState } from "@/lib/store/thunk/LogoutActionCreatorThunk";
+import { createLoginAPIThunk } from "../../lib/store/thunk/loginActionCreatorThunk";
+import { resetLogoutState } from "../../lib/store/thunk/LogoutActionCreatorThunk";
+import { createCookieCheckAPIThunk } from "../../lib/store/thunk/cookieCheckActionCreatorThunk";
 
 const Signin = () => {
   console.log('signin component chala <<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>');

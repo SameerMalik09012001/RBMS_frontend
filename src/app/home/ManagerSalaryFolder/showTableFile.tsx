@@ -1,6 +1,6 @@
-import UserContext from "@/app/contextAPI/userContextAPi";
 import React, { useContext, useMemo } from "react";
 import { HeaderGroup, useTable } from "react-table";
+import UserContext from "../../contextAPI/userContextAPi";
 
 interface Columns {
   Header: string;

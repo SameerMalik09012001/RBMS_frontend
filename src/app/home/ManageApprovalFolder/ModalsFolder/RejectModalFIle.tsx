@@ -1,10 +1,10 @@
 "use client";
 
-import { createRejectSalaryAPIThunk } from "@/lib/store/thunk/rejectSalaryActionCreatorThunk";
 import React, { useEffect, useState } from "react";
 
 import ReactDom from "react-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { createRejectSalaryAPIThunk } from "../../../../lib/store/thunk/rejectSalaryActionCreatorThunk";
 
 const RejectModal: React.FC = ({
   isOpen,

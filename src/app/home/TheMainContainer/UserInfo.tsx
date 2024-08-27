@@ -1,9 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import { HomePageProps } from "../page";
 import { useDispatch, useSelector } from "react-redux";
-// import { createApiThunk } from "@/lib/store/thunk/actionCreator";
 import { useRouter } from "next/navigation";
-import UserContext from "@/app/contextAPI/userContextAPi";
+import UserContext from "../../contextAPI/userContextAPi";
 
 const Info = ({ UserData }: { UserData: HomePageProps }) => {
   const { user, setUser } = useContext(UserContext);
