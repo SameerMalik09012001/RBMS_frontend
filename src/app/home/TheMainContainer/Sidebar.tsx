@@ -67,11 +67,12 @@ const Sidebar: React.FC = () => {
       setUser(data?.user);
     }
 
-    if (isNull(data)) {
-      route.push("/signin");
+    if(error === 'Request failed with status code 401') {
+      route.push('/signin')
     }
+    
 
-  }, [data]);
+  }, [data, error]);
 
   console.log({ data, loading, error });
   console.log(user);

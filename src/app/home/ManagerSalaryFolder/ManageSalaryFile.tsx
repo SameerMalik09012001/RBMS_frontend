@@ -135,7 +135,7 @@ const ManageSalary = () => {
         type="text"
         name="search"
         onChange={(e) => globalSearchDebounce(e.target.value)}
-        placeholder="Search Id, Name, Email etc"
+        placeholder="Search Id, Salary"
         className="w-full my-4 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none"
       />
 
